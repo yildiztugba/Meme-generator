@@ -15,17 +15,32 @@ export default function Meme(){
             url:""
         }
     )
+
+        function  handleChange(event){
+            setMemeData(prevMemeData=>({
+                ...prevMemeData,
+                [event.target.name]: event.target.value
+            }))
+            console.log(memeData)
+        }
+
     return(
         <div className="form">
         <input
             type="text"
             placeholder="Top text"
             className="form--input"
+            name="topText"
+            value={memeData.topText}
+            onChange={handleChange}
         />
         <input
             type="text"
             placeholder="Bottom text"
             className="form--input"
+            name="bottomText"
+            value={memeData.bottomText}
+            onChange={handleChange}
         />
         <button
         className="form--button"
