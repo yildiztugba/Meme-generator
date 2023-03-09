@@ -7,7 +7,14 @@ export default function Meme(){
         .then((res)=>res.json())
         .then((data)=>setAllMeme(data.data.memes))
     },[])
-    console.log(allMeme)
+    
+    const [memeData, setMemeData] = React.useState(
+        {
+            topText:"",
+            bottomText:"",
+            url:""
+        }
+    )
     return(
         <div className="form">
         <input
