@@ -12,7 +12,7 @@ export default function Meme(){
         {
             "topText":"",
             "bottomText":"",
-            "url":""
+            "url":"https://i.imgflip.com/44eggm.png"
         }
     )
 
@@ -59,6 +59,15 @@ export default function Meme(){
         >
             Get a new meme image
         </button>
+        <div>
+            <h1 className="text">{memeData.topText}</h1>
+            <img 
+                src= {memeData.url}
+                alt="randomImage"
+                className="randomImage"
+            />
+            <h1 className="text">{memeData.bottomText}</h1>
+        </div>
         
         </div>
     )
